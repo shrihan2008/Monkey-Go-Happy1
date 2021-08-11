@@ -5,7 +5,7 @@ var banana ,bananaImage, obstacle, obstacleImage
 var FoodGroup, obstacleGroup
 var  over,over1
 function preload()
-{
+{b1=loadImage("jugnle.jpg")
   monkey_running =                            loadAnimation("sprite_0.png","sprite_1.png","sprite_2.png","sprite_3.png","sprite_4.png","sprite_5.png","sprite_6.png","sprite_7.png","sprite_8.png")  
   bananaImage = loadImage("banana.png");
   obstacleImage = loadImage("obstacle.png"); 
@@ -35,7 +35,7 @@ function draw()
     {
       ground.x=ground.width/2
     }
-  background("green") 
+  background(b1) 
   if (GAMESTATE===1)
   {  
   
@@ -85,10 +85,11 @@ function draw()
     obstacleGroup.destroyEach()
     FoodGroup.setLifetimeEach(-1)
     obstacleGroup.setLifetimeEach(-1)
+    textSize(50)
     text("Game Over",350,350)
   }
   
-  
+  textSize(45)
   text("Survival  " +  survival,600,50)
   drawSprites(); 
 }
